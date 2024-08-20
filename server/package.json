@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.17.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "openai": "^4.56.0"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server"
+  },
+  "author": "Thomas Wong",
+  "license": "ISC",
+  "description": ""
+}
