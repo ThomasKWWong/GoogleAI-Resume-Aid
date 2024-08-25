@@ -1,20 +1,12 @@
 import './App.css';
+import Receiver from './Pages/Receiver.js';
 
 function App() {
-  async function test(){
-      // event.preventDefault();
-      const response = await fetch("/api/ai", {
-        method: 'POST',
-      })
-      const data = await response.json();
-      console.log(data.message)
-  }
-
   return (
-    <div className="App">
-      <button type = "submit" onClick={(e) => test()}>test</button>
+    <div>
+      <Receiver/>
     </div>
-  );
+  )
 }
 
 export default App;

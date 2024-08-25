@@ -21,7 +21,7 @@ app.post("/api/test", async(req, res) => {
 
 app.post("/api/ai", async (req, res) => {
     try {
-        const result = await model.generateContent("what's your name?")
+        const result = await model.generateContent(req.body.content)
         return res.json({ message: result.response.text() });
     } catch (err) {
         console.error(err);
