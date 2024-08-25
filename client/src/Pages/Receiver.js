@@ -4,19 +4,18 @@ import SelectionPanel from '../Components/SelectionPanel';
 import Input from '../Components/Input';
 
 const Receiver = () => {
-    const [objective, setObjective] = useState('')
-    // const [education, setEducation] = useState('')
-    // const [professionalExp, setProfessionalExp] = useState('')
-    // const [certifications, setCertifications] = useState('')
-    // const [projects, setProjects] = useState('')
-    // const [skills, setSkills] = useState('')
-    // const [volunteerExp, setVolunteerExp] = useState('')
+    const [inputs, setInputs] = useState('')
     const [checkedList, setCheckedList] = useState([])
     
-
+    const handleInputChange = (key, value) => {
+        setInputs({
+            ...inputs,
+            [key]: value
+        })
+    }
 
     const submitData = () => {
-        console.log(PromptProcessing.sendObjective(objective))
+        console.log(PromptProcessing.handlePrompts(inputs))
     }
 
     return (
@@ -26,8 +25,11 @@ const Receiver = () => {
                 <span>
                     {checkedList.map((item) => {
                         return (
-                            <div>
-                                <Input setObjective = {setObjective} value={item}/>
+                            <div key={item}>
+                                <Input setValue = {(value) => handleInputChange(item, value)}
+                                value={inputs[item] || ''}
+                                label={item}
+                                />
                             </div>
                         )
                     })}

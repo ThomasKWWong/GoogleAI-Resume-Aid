@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Input = ({setObjective, value}) => {
+const Input = ({setValue, value, label}) => {
 
     return (
         <div>
-            <h2>{value}</h2>
-            <input onChange={(e) => setObjective(e.target.value)}></input>
+            <h2>{label}</h2>
+            <input value={value}
+            onChange={(e) => setValue(e.target.value)}></input>
         </div>
     )
 }
