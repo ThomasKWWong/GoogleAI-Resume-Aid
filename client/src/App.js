@@ -1,10 +1,17 @@
 import './App.css';
-import Receiver from './Pages/Receiver.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Receiver from './Pages/Receiver';
+import Result from './Pages/Result';
 
 function App() {
   return (
     <div>
-      <Receiver/>
+      <BrowserRouter>
+        <Routes>
+          <Route index element = {<Receiver/>}/>
+          <Route path='/result' element={<Result/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

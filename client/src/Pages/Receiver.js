@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import PromptProcessing from '../Components/PromptProcessing'
 import SelectionPanel from '../Components/SelectionPanel';
 import Input from '../Components/Input';
 
 const Receiver = () => {
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState('')
     const [checkedList, setCheckedList] = useState([])
     
@@ -14,8 +16,10 @@ const Receiver = () => {
         })
     }
 
-    const submitData = () => {
-        console.log(PromptProcessing.handlePrompts(inputs))
+    const submitData = async () => {
+        const result = await PromptProcessing.handlePrompts(inputs)
+        // console.log(result)
+        navigate('/result', {state: {result}} )
     }
 
     return (

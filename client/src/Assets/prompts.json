@@ -1,9 +1,9 @@
 {
-    "Objective Statement Prompt": "Provide a resume objective statement that is an improvement of the provided statement without any extra text.",
-    "Education Prompt": "Provide a resume objective statement that is an improvement of the provided statement without any extra text.",
-    "Professional Experience Prompt": "",
-    "Certifications Prompt": "",
-    "Projects Prompt": "",
-    "Volunteer Experience Prompt": "",
-    "Skills Prompt": ""
+    "Objective Statement Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Education Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Professional Experience Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Certifications Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Projects Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Volunteer Experience Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters",
+    "Skills Prompt": "Give me some suggestions for improving this section for an entry level IT position. Give me this result without any * or other special characters"
 }

@@ -19,35 +19,38 @@ const PromptProcessing = {
         return data.message;
     },
 
-    handlePrompts(inputs){
-        // console.log(inputs)
+    async handlePrompts(inputs){
+        // array to be returned
+        let result = []
+        // determines the final prompt sent to Google AI
         for (const key in inputs){
             switch(key) {
                 case "Objective Statement":
-                    console.log(this.sendPrompt(inputs[key], prompts["Objective Statement Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Objective Statement Prompt"])}
                     break
                 case "Education":
-                    console.log(this.sendPrompt(inputs[key], prompts["Education Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Education Prompt"])}
                     break
                 case "Professional Experience":
-                    console.log(this.sendPrompt(inputs[key], prompts["Professional Experience Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Professional Experience Prompt"])}
                     break
                 case "Certifications":
-                    console.log(this.sendPrompt(inputs[key], prompts["Certifications Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Certifications Prompt"])}
                     break
                 case "Projects":
-                    console.log(this.sendPrompt(inputs[key], prompts["Projects Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Projects Prompt"])}
                     break
                 case "Volunteer Experience":
-                    console.log(this.sendPrompt(inputs[key], prompts["Volunteer Experience Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Volunteer Experience Prompt"])}
                     break
                 case "Skills":
-                    console.log(this.sendPrompt(inputs[key], prompts["Skills Prompt"]))
+                    result = {...result, [key] : await this.sendPrompt(inputs[key], prompts["Skills Prompt"])}
                     break
                 default:
                     break
             }
         }
+        return result
     }
     
 }
